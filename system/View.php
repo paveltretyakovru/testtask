@@ -32,7 +32,7 @@ class View{
 	# Регистрируем Twig
 	private function registrateTwig(){
 		\Twig_Autoloader::register();
-		$loader = new \Twig_Loader_Filesystem(dirname(__DIR__).'\views');		
+		$loader = new \Twig_Loader_Filesystem(dirname(__DIR__).'/views');		
 		$this->twig	= new \Twig_Environment($loader, array());
 	}
 
