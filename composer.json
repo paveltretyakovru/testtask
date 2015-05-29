@@ -1,0 +1,31 @@
+{
+    "name": "tretyakov/self",
+    "description": "Creating test project",
+
+    "require": {
+        "symfony/http-foundation": "^2.6",
+        "symfony/form": "^2.6",
+        "symfony/validator": "^2.6",
+        "doctrine/dbal": "^2.5",
+        "twig/twig": "^1.18",           //
+        "symfony/class-loader": "^2.6", //
+        "symfony/twig-bridge": "^2.6",
+        "symfony/security-csrf": "^2.6",
+        "symfony/config": "^2.6"
+    },
+
+    "authors": [
+        {
+            "name": "Pavel Tretyakov",
+            "email": "tretjakov.pavel@gmail.com"
+        }
+    ] ,
+
+    "autoload" : {
+        "classmap" : [
+            "controllers" ,
+            "models" ,
+            "system"
+        ]
+    }
+}

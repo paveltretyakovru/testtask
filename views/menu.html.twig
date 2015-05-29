@@ -1,0 +1,34 @@
+<div class="masthead clearfix">
+	<div class="inner">
+		<h3 class="masthead-brand">TestTask</h3>
+		<nav>
+			<ul class="nav masthead-nav">
+				<li {% if main_menu %}class="active"{% endif %}><a href="{{ host }}">Главная</a></li>
+
+				{% if auth_status %}
+				    <li><a href="{{ host }}users/logout">Выход</a></li>
+				{% else %}
+				    <li {% if login_menu %}class="active"{% endif %}><a href="{{ host }}users/login">Вход</a></li>
+					<li {% if registr_menu %}class="active"{% endif %}><a href="{{ host }}users/registration">Регистрация</a></li>
+				{% endif %}
+				
+			</ul>
+		</nav>
+	</div>
+</div>
+<br />
+	{% if errors %}
+
+		{% for error in errors %}
+		    <div class="alert alert-danger" role="alert">{{ error }}</div>
+		{% endfor %}
+
+	{% endif %}
+
+	{% if success %}
+
+		{% for mess in success %}
+		    <div class="alert alert-success" role="alert">{{ mess }}</div>
+		{% endfor %}
+
+	{% endif %}

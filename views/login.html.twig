@@ -1,0 +1,23 @@
+{% include 'header.html.twig' %}
+{% include 'menu.html.twig' %}
+
+{% if login_control %}
+	<h2 class="form-signin-heading">Вы авторизованы на сайте</h2>
+
+    <img src="{{ host }}i/cat_keyboard.jpg" style="border-radius:5px" />
+
+{% else %}
+	<h2 class="form-signin-heading">Авторизация на сайте</h2>
+
+	<div style="text-align:left">
+	<form action="#" method="post">
+		{{ form_widget(form) }}
+		<input type="submit" value="Войти" class="btn btn-default" />
+	</form>
+	</div>
+
+    
+{% endif %}
+
+
+{% include 'footer.html.twig' %}

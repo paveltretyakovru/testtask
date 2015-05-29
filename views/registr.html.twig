@@ -1,0 +1,22 @@
+{% include 'header.html.twig' %}
+{% include 'menu.html.twig' %}
+
+{% if registr_control %}	
+
+    <img src="{{ host }}i/cat_keyboard1.jpg" style="border-radius:5px" />
+
+{% else %}
+	<h2 class="form-signin-heading">Регистрация на сайте</h2>
+
+	<div style="text-align:left">
+	<form action="#" method="post">
+		{{ form_widget(form) }}
+		<input type="submit" value="Войти" class="btn btn-default" />
+	</form>
+	</div>
+
+    
+{% endif %}
+
+
+{% include 'footer.html.twig' %}
